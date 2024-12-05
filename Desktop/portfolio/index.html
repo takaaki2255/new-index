@@ -4,10 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PORTFOLIO</title>
+    <style>
+      body {
+        background-color: #afeeee;
+        /* background-attachment: fixed; */
+      }
+      p {
+        font-size: 20px;
+        color: red;
+      }
+      /* 丸の設定 */
+      .circle {
+        /* 横幅 */
+        width: 90%;
+        /* 縦幅 */
+        height: 80%;
+        /* 角の丸み */
+        border-radius: 55%;
+        /* 配色設定--ないと表示されない */
+        background: white;
+
+        position: absolute;
+
+        top: 5%;
+        left: 4%;
+      }
+      footer {
+        background-color: white;
+        position: absolute; /*←絶対位置*/
+        bottom: 0; /*下に固定*/
+      }
+    </style>
   </head>
   <body>
-    <h1>PORTFOLIO</h1>
-    <p>ボタン１_プロフィール</p>
-    <p>ボタン２_経歴</p>
+    <div class="circle">
+      <h1>PORTFOLIO</h1>
+      <p>ボタン１_プロフィール</p>
+      <p>ボタン２_経歴</p>
+    </div>
   </body>
+  <footer></footer>
 </html>
