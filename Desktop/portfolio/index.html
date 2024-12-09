@@ -8,17 +8,27 @@
       body {
         background-color: #afeeee;
         /* background-attachment: fixed; */
+        overflow: hidden;
+        z-index: 1;
       }
       p {
         font-size: 20px;
         color: red;
       }
-      /* 丸の設定 */
+
+      h1 {
+        font-size: 450%;
+        margin-left: 2%;
+        margin-top: 2%;
+        z-index: 3;
+        position: absolute;
+      }
+      /* 丸の設定  */
       .circle {
         /* 横幅 */
-        width: 90%;
+        width: 120%;
         /* 縦幅 */
-        height: 80%;
+        height: 150%;
         /* 角の丸み */
         border-radius: 55%;
         /* 配色設定--ないと表示されない */
@@ -26,22 +36,72 @@
 
         position: absolute;
 
-        top: 5%;
-        left: 4%;
+        top: 8%;
+        left: 5%;
+        z-index: 2;
       }
+
       footer {
-        background-color: white;
-        position: absolute; /*←絶対位置*/
-        bottom: 0; /*下に固定*/
+        background-color: #afeeee;
+        width: 100%;
+        height: 60px;
+        text-align: center;
+        color: white;
+        position: fixed; /*←絶対位置 */
+        bottom: 0; /*下に固定 */
+        z-index: 4;
+      }
+      .button1 {
+        margin-left: 70%;
+        margin-top: 42%;
+        display: inline-block; /* aタグをインラインブロックにする */
+        width: 160px; /* ボタンの幅 */
+        height: 60px; /* ボタンの高さ */
+        line-height: 60px; /* テキストを中央揃え */
+        background-color: #afeeee; /* ボタンの背景色 */
+        color: black; /* テキスト色 */
+        text-align: center; /* テキストを中央揃え */
+        border-radius: 100vh; /* 楕円形の角丸 */
+        font-size: 18px; /* テキストサイズ */
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* 影を追加 */
+        z-index: 9999;
+        position: absolute;
+      }
+      .button2 {
+        margin-left: 85%;
+        margin-top: 42%;
+        display: inline-block; /* aタグをインラインブロックにする */
+        width: 160px; /* ボタンの幅 */
+        height: 60px; /* ボタンの高さ */
+        line-height: 60px; /* テキストを中央揃え */
+        background-color: #afeeee; /* ボタンの背景色 */
+        color: black; /* テキスト色 */
+        text-align: center; /* テキストを中央揃え */
+        border-radius: 100vh; /* 楕円形の角丸 */
+        font-size: 18px; /* テキストサイズ */
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* 影を追加 */
+        z-index: 9998;
+        position: absolute;
       }
     </style>
+    <script>
+      window.onload = function () {
+        document.getElementById("pro").onclick = function () {
+          // alert("Pyxofy へようこそ!");
+          document.getElementById("text").innerHTML = "クリックされた！";
+        };
+      };
+    </script>
   </head>
   <body>
+    <h1>PORTFOLIO</h1>
     <div class="circle">
-      <h1>PORTFOLIO</h1>
-      <p>ボタン１_プロフィール</p>
-      <p>ボタン２_経歴</p>
+      <p id="text">'テストです'</p>
     </div>
+    <a href="#" class="button1" id="pro">楕円形のボタン</a>
+    <a href="#" class="button2">楕円形のボタン</a>
   </body>
-  <footer></footer>
+  <footer>
+    <a> </a>
+  </footer>
 </html>
