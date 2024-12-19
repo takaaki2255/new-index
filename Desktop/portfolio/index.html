@@ -12,25 +12,30 @@
         z-index: 1;
       }
       p {
-        font-size: 20px;
-        color: red;
+        font-size: 4vw;
+        margin-left: 25vw;
+        margin-top: 15vw;
+        z-index: 7;
+        position: absolute;
+        font-family: "arial black", serif;
       }
 
       h1 {
-        font-size: 450%;
+        font-size: 7vw;
         margin-left: 2%;
         margin-top: 2%;
         z-index: 3;
         position: absolute;
+        font-family: "arial black", serif;
       }
       /* 丸の設定  */
       .circle {
         /* 横幅 */
-        width: 120%;
+        width: 100vw;
         /* 縦幅 */
-        height: 150%;
-        /* 角の丸み */
-        border-radius: 55%;
+        height: 50vw;
+        /* 角の丸み 半円設定 */
+        border-radius: 50%/100% 100% 0 0;
         /* 配色設定--ないと表示されない */
         background: white;
 
@@ -44,7 +49,7 @@
       footer {
         background-color: #afeeee;
         width: 100%;
-        height: 60px;
+        height: 2vw;
         text-align: center;
         color: white;
         position: fixed; /*←絶対位置 */
@@ -52,54 +57,81 @@
         z-index: 4;
       }
       .button1 {
-        margin-left: 70%;
-        margin-top: 42%;
+        margin-left: 64vw;
+        margin-top: 2vw;
         display: inline-block; /* aタグをインラインブロックにする */
-        width: 160px; /* ボタンの幅 */
-        height: 60px; /* ボタンの高さ */
-        line-height: 60px; /* テキストを中央揃え */
+        width: 15vw; /* ボタンの幅 */
+        height: 5vw; /* ボタンの高さ */
+        line-height: 5vw; /* テキストを中央揃え */
         background-color: #afeeee; /* ボタンの背景色 */
         color: black; /* テキスト色 */
         text-align: center; /* テキストを中央揃え */
         border-radius: 100vh; /* 楕円形の角丸 */
-        font-size: 18px; /* テキストサイズ */
+        border: 1px black solid;
+        font-size: 2vw; /* テキストサイズ */
+        font-family: "arial black", serif;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* 影を追加 */
         z-index: 9999;
         position: absolute;
       }
       .button2 {
-        margin-left: 85%;
-        margin-top: 42%;
+        margin-left: 80vw;
+        margin-top: 2vw;
         display: inline-block; /* aタグをインラインブロックにする */
-        width: 160px; /* ボタンの幅 */
-        height: 60px; /* ボタンの高さ */
-        line-height: 60px; /* テキストを中央揃え */
+        width: 15vw; /* ボタンの幅 */
+        height: 5vw; /* ボタンの高さ */
+        line-height: 5vw; /* テキストを中央揃え */
         background-color: #afeeee; /* ボタンの背景色 */
         color: black; /* テキスト色 */
         text-align: center; /* テキストを中央揃え */
         border-radius: 100vh; /* 楕円形の角丸 */
-        font-size: 18px; /* テキストサイズ */
+        border: 1px black solid;
+        font-size: 2vw; /* テキストサイズ */
+        font-family: "arial black", serif;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* 影を追加 */
-        z-index: 9998;
+        z-index: 9999;
         position: absolute;
       }
     </style>
+    <!-- 
     <script>
-      window.onload = function () {
-        document.getElementById("pro").onclick = function () {
-          // alert("Pyxofy へようこそ!");
-          document.getElementById("text").innerHTML = "クリックされた！";
-        };
-      };
-    </script>
+      document.getElementById("for").addEventListtener("click", () => {
+        // alert("Pyxofy へようこそ!");
+        document.getElementById("text").innerHTML = "クリックしてね";
+      });
+    </script> -->
   </head>
   <body>
-    <h1>PORTFOLIO</h1>
+    <h1 id="btn0">PORTFOLIO</h1>
     <div class="circle">
-      <p id="text">'テストです'</p>
+      <p id="text">
+        TITLE -タイトル-<br />
+        PROFILE -プロフィール-<br />
+        SKILL -スキル-<br />
+      </p>
     </div>
-    <a href="#" class="button1" id="pro">楕円形のボタン</a>
-    <a href="#" class="button2">楕円形のボタン</a>
+    <a href="#" class="button1" id="btn1">PROFILE</a>
+    <a href="#" class="button2" id="btn2">SKILL</a>
+    <script>
+      const btn0 = document.getElementById("btn0");
+      const btn1 = document.getElementById("btn1");
+      const btn2 = document.getElementById("btn2");
+      const text = document.getElementById("text");
+
+      btn0.addEventListener("click", () => {
+        text.innerHTML =
+          "TITLE -タイトル-<br /> PROFILE -プロフィール-<br /> SKILL -スキル-<br />";
+      });
+
+      btn1.addEventListener("click", () => {
+        text.innerHTML =
+          "TAKAAKI　MATSUDA<br /> 年齢：31<br /> 趣味：映画鑑賞 料理 フィギュア収集";
+      });
+      btn2.addEventListener("click", () => {
+        text.innerHTML =
+          "現職：システムエンジニア<br /> 使用言語：SQL C# HTML CSS JavaScript PHP<br /> 資格：ITパスポート 基本情報技術者";
+      });
+    </script>
   </body>
   <footer>
     <a> </a>
